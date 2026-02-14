@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtDepositar = new TextBox();
+            txtVisor = new TextBox();
             lblCaixaEletronico = new Label();
             label1 = new Label();
             btnDepositar = new Button();
             btnSaque = new Button();
             btnSaldo = new Button();
-            txtSaque = new TextBox();
-            textBox2 = new TextBox();
+            txtSaldo = new TextBox();
+            label2 = new Label();
             SuspendLayout();
             // 
-            // txtDepositar
+            // txtVisor
             // 
-            txtDepositar.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDepositar.Location = new Point(180, 160);
-            txtDepositar.Name = "txtDepositar";
-            txtDepositar.PlaceholderText = "Digite o valor de Depósito";
-            txtDepositar.Size = new Size(190, 25);
-            txtDepositar.TabIndex = 0;
-            txtDepositar.TextAlign = HorizontalAlignment.Center;
+            txtVisor.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtVisor.Location = new Point(102, 160);
+            txtVisor.Name = "txtVisor";
+            txtVisor.PlaceholderText = "Digite valor";
+            txtVisor.Size = new Size(190, 25);
+            txtVisor.TabIndex = 0;
+            txtVisor.TextAlign = HorizontalAlignment.Center;
             // 
             // lblCaixaEletronico
             // 
@@ -70,21 +70,23 @@
             // 
             // btnDepositar
             // 
-            btnDepositar.Location = new Point(31, 142);
+            btnDepositar.Location = new Point(57, 191);
             btnDepositar.Name = "btnDepositar";
             btnDepositar.Size = new Size(143, 56);
             btnDepositar.TabIndex = 2;
-            btnDepositar.Text = "button1";
+            btnDepositar.Text = "Depositar";
             btnDepositar.UseVisualStyleBackColor = true;
+            
             // 
             // btnSaque
             // 
-            btnSaque.Location = new Point(31, 201);
+            btnSaque.Location = new Point(207, 191);
             btnSaque.Name = "btnSaque";
             btnSaque.Size = new Size(143, 56);
             btnSaque.TabIndex = 2;
             btnSaque.Text = "Sacar";
             btnSaque.UseVisualStyleBackColor = true;
+            
             // 
             // btnSaldo
             // 
@@ -94,40 +96,41 @@
             btnSaldo.TabIndex = 2;
             btnSaldo.Text = "Consulta Saldo";
             btnSaldo.UseVisualStyleBackColor = true;
+           
             // 
-            // txtSaque
+            // txtSaldo
             // 
-            txtSaque.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtSaque.Location = new Point(180, 217);
-            txtSaque.Name = "txtSaque";
-            txtSaque.PlaceholderText = "Digite o valor de Saque";
-            txtSaque.Size = new Size(190, 25);
-            txtSaque.TabIndex = 0;
-            txtSaque.TextAlign = HorizontalAlignment.Center;
+            txtSaldo.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtSaldo.Location = new Point(180, 285);
+            txtSaldo.Name = "txtSaldo";
+            txtSaldo.PlaceholderText = "Saldo em conta";
+            txtSaldo.ReadOnly = true;
+            txtSaldo.Size = new Size(190, 25);
+            txtSaldo.TabIndex = 0;
+            txtSaldo.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox2
+            // label2
             // 
-            textBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(180, 285);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Saldo em conta";
-            textBox2.Size = new Size(190, 25);
-            textBox2.TabIndex = 0;
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            label2.AutoSize = true;
+            label2.Location = new Point(155, 356);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 3;
+            label2.Text = "label2";
             // 
             // CaixaEletronico
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(421, 442);
+            Controls.Add(label2);
             Controls.Add(btnSaldo);
             Controls.Add(btnSaque);
             Controls.Add(btnDepositar);
             Controls.Add(label1);
             Controls.Add(lblCaixaEletronico);
-            Controls.Add(textBox2);
-            Controls.Add(txtSaque);
-            Controls.Add(txtDepositar);
+            Controls.Add(txtSaldo);
+            Controls.Add(txtVisor);
             Name = "CaixaEletronico";
             Text = "Form1";
             ResumeLayout(false);
@@ -136,13 +139,13 @@
 
         #endregion
 
-        private TextBox txtDepositar;
+        private TextBox txtVisor;
         private Label lblCaixaEletronico;
         private Label label1;
         private Button btnDepositar;
         private Button btnSaque;
         private Button btnSaldo;
-        private TextBox txtSaque;
-        private TextBox textBox2;
+        private TextBox txtSaldo;
+        private Label label2;
     }
 }
